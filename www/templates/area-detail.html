@@ -1,0 +1,47 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{area.name}}">
+  <ion-content class="padding">
+    <ion-slide-box does-continue="true" auto-play="true">
+        <ion-slide>
+            <img src="http://loremflickr.com/360/320/camping" />
+            <!--<img src="//camperando-uploads.s3.amazonaws.com/uploads/{{area.images[0]}}"/>-->
+        </ion-slide>
+        <ion-slide>
+            <img src="http://loremflickr.com/360/320/camping" />
+            <!--<img src="//camperando-uploads.s3.amazonaws.com/uploads/{{area.images[0]}}"/>-->
+        </ion-slide>
+        <ion-slide>
+            <img src="http://loremflickr.com/360/320/camping" />
+            <!--<img src="//camperando-uploads.s3.amazonaws.com/uploads/{{area.images[0]}}"/>-->
+        </ion-slide>
+        <ion-slide>
+            <img src="http://loremflickr.com/360/320/camping" />
+            <!--<img src="//camperando-uploads.s3.amazonaws.com/uploads/{{area.images[0]}}"/>-->
+        </ion-slide>
+    </ion-slide-box>
+    <h3>Info</h3>
+    <p>
+      {{area.description}}
+
+    </p>
+    <h3>Servizi</h3>
+    <div>
+      <div  ng-repeat="service in area.services" class="row row-center">
+        <div class="col"><img src="http://placehold.it/32x32"></div>
+        <div class="col">Caption Middle</div>
+      </div>
+    </div>
+
+    <h3>Dove</h3>
+    <map center="-25.363882,131.044922" zoom="8">
+      <marker position="-25.363882,131.044922" title="Hello World!"></marker>
+
+    </map>
+
+  </ion-content>
+</ion-view>

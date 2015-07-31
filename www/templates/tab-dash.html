@@ -1,0 +1,45 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+
+    <ion-list class="list card item-text-wrap">
+      <ion-item  ng-repeat="area in areas" >
+
+
+        <div class="item item-divider">
+          {{area.name}}
+        </div>
+
+          <div class="item item-image">
+            <img  src="//camperando-uploads.s3.amazonaws.com/uploads/{{area.images[0]}}"/>
+          </div>
+        <a class="item" href="#/tab/area/{{area._id}}">
+          <p>
+            {{area.description}}
+          </p>
+            <h2>Servizi</h2>
+            <div>
+              <div  ng-repeat="service in area.services" class="row row-center">
+                <div class="col"><img src="http://placehold.it/32x32"></div>
+                <div class="col">Caption Middle</div>
+              </div>
+            </div>
+        </a>
+
+        <div class="item tabs tabs-secondary tabs-icon-left">
+          <a class="tab-item" href="#">
+            <i class="icon ion-thumbsup"></i>
+            Like
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-chatbox"></i>
+            Comment
+          </a>
+          <a class="tab-item" href="#">
+            <i class="icon ion-share"></i>
+            Share
+          </a>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
